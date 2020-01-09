@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script async src="maker.js"></script>
+  </head>
+  <body>
+    <!-- 재사용하기 위해 미리 만들어놓은 node elements(html 태그들) : 시작 -->
+
+    <!-- 새 프로젝트 추가했을 때 입력받을 div 템플릿 -->
+    <div class="new-project-history display-off">
+      <ul>
+        <li><label>회사명 :</label><input type="text" /></li>
+        <li><label>프로젝트명 :</label><input type="text" /></li>
+        <li><label>내용 :</label><textarea></textarea></li>
+      </ul>
+    </div>
+
+    <!-- 새 경력사항 추가했을 때 추가할 전체 div 템플릿 -->
+    <div class="job-history display-off">
+      <div class="section-1">
+        <div class="section-1-left"></div>
+        <div class="section-1-right"></div>
+      </div>
+      <div class="section-2">
+        <div class="section-2-left">
+          <button onclick="addProject(this)">새 프로젝트 추가</button>
+        </div>
+        <div class="section-2-right">
+          <button onclick="addJobHistory()">새 경력사항 추가</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 재사용하기 위해 미리 만들어놓은 node elements(html 태그들) : 끝 -->
+
+    <!-- 전체 보여지는 View : 시작 -->
+    <div id="root">
+      <!-- 경력사항 기본 화면 : 시작 -->
+      <div class="job-history job-history-0">
+        <h1>경력 사항 - 1</h1>
+
+        <!-- 프로젝트 섹션 : 시작 -->
+        <div class="section-1">
+          <div class="section-1-left"></div>
+          <div class="section-1-right"></div>
+        </div>
+        <!-- 프로젝트 섹션 : 시작 -->
+
+        <!-- 버튼 섹션 : 시작 -->
+        <div class="section-2">
+          <div class="section-2-left">
+            <button onclick="addProject(this)">새 프로젝트 추가</button>
+          </div>
+          <div class="section-2-right">
+            <button onclick="addJobHistory()">새 경력사항 추가</button>
+          </div>
+        </div>
+        <!-- 버튼 섹션 : 끝 -->
+      </div>
+      <!-- 경력사항 기본 화면 : 끝 -->
+    </div>
+    <!-- 전체 보여지는 View : 끝 -->
+  </body>
+</html>
